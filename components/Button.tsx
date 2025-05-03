@@ -2,9 +2,10 @@ import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 type Props = {
   label: string;
+  onPress?: () => void;
 };
 
-export default function Button({ label }: Props) {
+export default function Button({ label, onPress  }: Props) {
   return (
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
